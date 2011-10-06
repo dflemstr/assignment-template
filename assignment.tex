@@ -42,7 +42,7 @@
 \usepackage{fontspec}
 \setmainfont[Mapping=tex-text,Numbers=OldStyle]{Calluna}
 \setsansfont[Mapping=tex-text]{Calluna Sans}
-\setmonofont{DejaVu Sans Mono}
+\setmonofont[Scale=0.82]{DejaVu Sans Mono}
 
 % Alternate fonts - More "swirly" fonts:
 %\usepackage{fontspec}
@@ -102,11 +102,11 @@
     \oldstylenums{\arabic{FancyVerbLine}}}}
 
 % Add support for Java code sections.
-\newminted{java}{bgcolor=codebg,fontsize=\small,linenos=true,numbersep=6pt,
+\newminted{java}{bgcolor=codebg,linenos=true,numberblanklines=false,numbersep=6pt,
   mathescape=true,texcl=true,gobble=2}
-\newmintedfile{java}{fontsize=\small,linenos=true,numbersep=6pt,
+\newmintedfile{java}{linenos=true,numberblanklines=false,numbersep=6pt,
   stepnumber=5,mathescape=true,texcl=true}
-\newmint{java}{bgcolor=codebg,fontsize=\small,mathescape=true,texcl=true}
+\newmint{java}{bgcolor=codebg,mathescape=true,texcl=true}
 
 % Header and footer
 \pagestyle{fancy}
@@ -122,8 +122,11 @@
 \setlength{\parindent}{0pt}
 
 % Metadata
+\def\assignmentnr{}
+\def\thedate{\today}
 \title{Assignment \assignmentnr\ - \coursenr\ \coursename}
 \author{\theauthor}
+\date{\thedate}
 \begin{document}
 
 % Remove this to not have a cover sheet.
