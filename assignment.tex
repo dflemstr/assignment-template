@@ -28,6 +28,13 @@
 % Include author-specific information from the external file
 \input{authorinfo}
 
+% Include course-specific information from an external file.
+% For an assignment catalog, make one course file for each course,
+% and input the right course file for each assignment document.
+% E.g.:
+%\input{DD1341}
+\input{courseinfo}
+
 % Fontspecs
 % Using XeTeX? Good! These awesome fonts are awesome
 % (But they need to be installed on your system as .ttf or
@@ -107,7 +114,7 @@
 
 % Header and footer
 \pagestyle{fancy}
-\lhead{\course\ -\ Inlämning \assignmentnr}
+\lhead{\coursenr\ -\ Inlämning \assignmentnr}
 \rhead{\theauthor\ -\ \thedate}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -122,8 +129,7 @@
 
 % Metadata
 \def\assignmentnr{}
-\title{Inlämning \assignmentnr\ - \course\ \coursename}
-\date{\thedate}
+\title{Inlämning \assignmentnr\ - \coursenr\ \coursename}
 \author{\theauthor}
 \begin{document}
 
